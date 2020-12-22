@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Form</title>
+
+    <style>
+         body {text-align: left; font-family: 'Times New Roman', Times, serif;}
+       
+        h1{font-size: 50px; font-family:'Times New Roman', Times, serif;}
+       
+
+        table,td,th{
+        border-color: black; font-style: normal;
+        border-width: 1px; 
+        border-style: solid;
+        padding: 3px;
+    
+     
+    }
+    
+    tr:nth-child(odd){
+            background-color: lightgray; width: 10px; 
+    }
+    tr:nth-child(even){
+        background-color:rgba(3, 112, 52, 0.781);width: 10px;        
+    }
+    
+    ul{
+        display: flex;
+        margin-trim: 50px;
+    }
+    ol{
+        margin-right: 20px; 
+    }
+    
+    </style>
+   
+        <script>
+            function signIn(){
+                var firstName = document.getElementById('FirstName').value;
+                var lastName = document.getElementById('LastName').value;
+                var email = document.getElementById('Email').value;
+                var number = document.getElementById('Number').value;
+                var message ="";
+                if(applyemail.length<20){
+                    message = "Invalid email, please try again!"
+                } else if (applynumber<9) {
+                    message = "Invalid phone number!"
+                } else {
+                    message = `Thank you for regsiter ${firstName}, ${lastName}`
+                }
+                alert(message);}
+        </script>
+
+</head>
+
+<body>
+<h1 Application Form style="color:#17A2B8">Application Form </h1> 
+<img src="./icon.png" alt="UserIcon" width ="20" height ="20" ></img>
+
+
+<span>Apply for the course you're interested in</span>
+    
+<br>
+<br>
+* = required field
+
+<br>
+
+<form action=""></form>
+
+<input type ="first name" placeholder="* First Name"  style="color:gray" id="First Name"></input>
+<br>
+<br>
+<input type ="Middle name" placeholder="Middle Name"  style="color:gray" id="Middle Name"></input>
+<br>
+<br>
+<input type ="Last name" placeholder="* Last Name"  style="color:gray" id="Last Name"></input>
+<br>
+<br>
+<span>* Date Of Birth</span>
+<br>
+<br>
+<input type ="date" placeholder="*mm/dd/yyyy"  style="color:black"></input>
+<br>
+<span>* Gender</span>
+<br>
+<br>
+
+<input type="radio" name="Gender" value="male">Male</input>
+<input type="radio" name="Gender" value="Fenale">Female</input>
+<input type="radio" name="Gender" value="male">Other</input>
+
+<br>
+
+<input type="email Address" placeholder="* Email Address" style="color:gray" id="Email Address"></inpu>
+<br>
+<br>
+<input type="Phone number" placeholder="* Phone Number" style="color:gray" id=" Phone Number"></inpu>
+<br>
+<br>
+Upload a file:
+<input type="file"></input>
+<br>
+<br>
+
+<select name="Course" id="course">
+    <option value="Crouse">Crouse </option>
+    <option value="Software Develompent Test">Software Develompent Test </option>
+    <option value="AWS solution">AWS solution </option>
+    <option value="Screm master">Screm master </option>
+</select>
+<br>
+<br>
+
+<select name="How did you hear about us?" id="How did you hear about us?"> *How did you hear about us?
+<option value= "How did you hear about us?"> "How did you hear about us? </option>
+<option value="BoraTech">BoraTech </option>
+<option value="Refferred by a student">Refferred by a student </option>
+<option value="Other">Other </option>
+</select>
+<br>
+<p>
+   <input type="checkbox"> </input> 
+
+   <span>I'm not a robot </span>
+ <br>
+ 
+
+</form>
+<button onclick="alert('Succese')" style = "color:white;background-color: #17A2B8;border-width: 0;">Submit Application </button>
+
+
+
+<br>
+
+<br>
+<iframe src="./SignIn.html" frameborder="1"></iframe>
+<br>
+<br>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tr>
+        <td>May</th>
+        <th>may@gmail.com</th>
+        <th>240-300-7000</th>
+    </tr>
+    <tr>
+        <td>Lily</th>
+        <th>lily@gmail.com</th>
+        <th>240-300-7001</th>
+    </tr>
+    <tr>
+        <td>Anna</th>
+        <th>Anna@gmail.com</th>
+        <th>240-300-7002</th>
+    </tr>
+    <tr>
+        <td>Kran</th>
+        <th>kran@gmail.com</th>
+        <th>240-300-7003</th>
+    </tr>
+</table>
+<ul>
+<li>Apple</li>
+<li>Pineapple</li>
+<li>Orange</li>
+<li>Strawberry</li>
+</ul>
+
+<ol>
+    <li>Cherry</li>
+    <li>blueberry</li>
+    <li>Grape</li>
+</ol>
+
+</body>
+
+</html>
