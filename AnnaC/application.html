@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Application Form
+
+    </title>
+    <style>
+        table,
+        td,
+        th {
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: grey;
+        }
+
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        function signIn() {
+            var name = document.getElementById('Firstname').value;
+            var phonenumber = document.getElementById('phonenumber').value;
+            var message = "";
+            if (name.length < 4) {
+                message = "Invalid message";
+            }
+            else if (phonenumber.length < 4) {
+                message = "Invalid password";
+            } else {
+                message = `You are sign in with name: ${name}, phonenumber: ${phonenumber}`;
+            }
+            alert(message);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 style="color: rgb(31, 203, 203);">Application Form</h1>
+
+    <img src="./icon.png" alt="UserIcon" width="20" , height="20">
+    <span>Apply for the course you're interested in</span>
+    <br>
+    <span>* = require field</span>
+    <br>
+
+    <input type="text" id="Firstname" placeholder="*First Name"></input>
+    <br>
+    <input type="text" id="Middlename" placeholder="Middle Name"></input>
+    <br>
+    <input type="text" id="Lastname" placeholder="*Last name"></input>
+    <br>
+    <small> *Date Of Birth</small>
+
+
+    <br>
+    <input type="date" id="Date Of Birth"></input>
+    <br>
+    <small>*Gender</small>
+
+    <br>
+    <input type="radio" name="gender" , value="male">Male</input>
+
+    <input type="radio" name="gender" , value="female">FeMale</input>
+    <input type="radio" name="gender" , value="other">Other</input>
+    <br>
+
+
+    <input type="text" id="email" placeholder="Email address"></input>
+    <br>
+    <input type="text" id="phonenumber" placeholder="Phone Number"></input>
+
+    <br>
+
+    <select name="course" id="course">
+        <option value="course">Course</option>
+        <option value="course1">Course1</option>
+        <option value="course2">Course2</option>
+        <option value="course3">Course3</option>
+    </select>
+    <br>
+    <select name="way" id="way">
+        <option value="way">How did you hear about us?</option>
+        <option value="way1">way1</option>
+        <option value="way2">way2</option>
+        <option value="way3">way3</option>
+    </select>
+    <br>
+    <input type="checkbox">I am not a robot.</input>
+    <br>
+    <input onClick="signIn()" type="ApplicationForm" id="Submit"
+        style="color: white;background-color: rgb(31, 203, 203); border-width: 0">Submit</input>
+
+    <br>
+
+</body>
+
+
+</html>
