@@ -1,0 +1,23 @@
+table,
+td,
+th {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:nth-child(odd) {
+    background-color: lightpink;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
