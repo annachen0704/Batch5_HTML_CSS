@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Bora Application</title>
+        <style> 
+        body {text-align: center; font-family: monospace;}
+        h1{font-size: 48px; font-family:monospace;}
+        </style>
+        <!-- <link rel="stylesheet" href ="./style.css">  -->
+        <script>
+            function signIn(){
+                var applyfirstName = document.getElementById('ApplyFirstName').value;
+                var applylastName = document.getElementById('ApplyLastName').value;
+                var applyemail = document.getElementById('ApplyEmail').value;
+                var applynumber = document.getElementById('ApplyNumber').value;
+                var message ="";
+                if(applyemail.length<4){
+                    message = "Invalid email, please try again!"
+                } else if (applynumber<9) {
+                    message = "Invalid phone number, please try again!"
+                } else {
+                    message = `Thank you for regsiter ${applyfirstName}, ${applylastName}`
+                }
+                alert(message);}
+        </script>
+    </head>
+    
+    <body>
+        <h1  style= color:#17A2B8>Application Form</h1>
+        <img src = "./image/littlebear.png" alt="icon image" width="30" height = "30">
+        <span>Apply for the course you're interested in</span>
+        <p style= color:grey;font-size:small> *= required field</p>
+        <form action="" >
+        <input type=text placeholder="*First Name" style=color:#17A2B8 id = "ApplyFirstName"><br><br>
+        <input type=text placeholder="Middle Name" style=color:#17A2B8 ><br><br>
+        <input type=text placeholder="*Last Name" style=color:#17A2B8 id = "ApplyLastName"> <br>
+        <p>* Date of Birth</p>
+        <input type="date"><br>
+        <p>* Gender</p>
+        <input type = radio name="gender">Male
+        <input type = radio name="gender">Female
+        <input type = radio name="gender"> Other <br><br>
+        <input type=email placeholder = "*Email Address" style=color:#17A2B8 id = "ApplyEmail"><br><br>
+        <input type=number placeholder = "*Phone Number" style=color:#17A2B8 id = "ApplyNumber"> <br><br>
+        <select   name ="Course" id = "Course"> 
+        <option value = "">* Course</option>
+        <option value = "Software Development Engineer in Test" > Software Development Engineer in Test</option>
+        <option value = "AWS Solution Architect Associate" > AWS Solution Architect Associat</option>
+        <option value = "Scrum Master" > Scrum Master</option>
+         </select><br><br>
+         <select name ="How did you hear about us" id = "Course"> 
+            <option value = "">* How did you hear about us? </option>
+            <option value = "BoraTech/Bora Consulting" > BoraTech/Bora Consulting</option>
+            <option value = "Referred by a studdent or alumni" > Referred by a studdent or alumni</option>
+            <option value = "Other(Word by mouth, etc)" > Other(Word by mouth, etc)</option>
+             </select><br><br>
+             <p>* Upload your profilo photo</p>
+             <input type="file"><br><br>
+        <input type = checkbox> I'm not a robot <br><br>
+        <input onclick = "signIn()" type = "submit" style = "color:white;background-color: #17A2B8;border-width: 0;">
+        </form>
+        <br>
+        <button onclick = "alert('Hello World')"> Submit Application</button>
+    </body>
+</html>

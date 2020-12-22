@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bora Student Registration</title>
+    <script>
+      function signIn() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var message = "";
+        if (email.length < 4) {
+          message = "Invalid email, please try again!";
+        } else if (password.length < 4) {
+          message = "Invalid password, please try again!";
+        } else {
+          message = `You're signing in with email: ${email}, password: ${password}`
+        }
+        alert(message);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="color:#17A2B8">Sign In</h1>
+    <img src="./icon.png" alt="UserIcon" width="20" height="20"></img>
+    <span>Sign Into Your Account</span>
+    <br>
+    <form action="">
+      <input type="text" id="email" placeholder="Email"></input>
+      <br>
+      <input type="password" id="password" placeholder="Password"></input>
+      <br>
+      <input onclick="signIn()" type="submit" style="color:white;background-color:#17A2B8;border-width: 0;"></input>
+    </form>
+    <br>   
+    <p>
+        <span>Don't have an account?</span>
+        <a href="./signup.html" style="color:#17A2B8">Register</a>
+    </p>
+  </body>
+</html>
